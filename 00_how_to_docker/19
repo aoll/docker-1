@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker-machine ssh Char '
+docker stop Abathur;
+docker rm Abathur;
+
+docker run  -p 3000:3000 -it --rm --name  Abathur  -d \
+ -v "$PWD":/root -w /root python:2-slim \
+   /bin/bash;
+
+docker exec  Abathur  pip install flask;
+docker exec -d Abathur  python app.py;'

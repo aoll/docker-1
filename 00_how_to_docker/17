@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker-machine ssh Char '
+docker ps';

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker-machine ssh Char '
+docker run -d \
+			--name roach-warden \
+			-p 8081:80 \
+			--link spawning-pool:db \
+			--restart always \
+			phpmyadmin/phpmyadmin '

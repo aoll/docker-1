@@ -1,0 +1,9 @@
+#!/bin/bash
+docker-machine ssh Char '
+docker run -d \
+								--name spawning-pool \
+								-v /hatchery:/var/lib/mysql \
+								-e MYSQL_ROOT_PASSWORD=Kerrigan \
+								-e MYSQL_DATABASE=zerglings \
+								--restart always \
+								mysql ;'

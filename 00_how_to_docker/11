@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-machine ssh Char "docker volume create hatchery"
+docker-machine ssh Char "docker volume ls"
