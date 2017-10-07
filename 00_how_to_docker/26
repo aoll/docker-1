@@ -1,0 +1,10 @@
+#!/bin/bash
+
+eval "$(docker-machine env Char)"
+docker stop orbital-command
+docker rm orbital-command
+docker service create -d --hostname Char --name orbital-command \
+			--network overmind \
+			-e RABBITMQ_DEFAULT_USER=root \
+			-e RABBITMQ_DEFAULT_PASS=root \
+			rabbitmq:3-management

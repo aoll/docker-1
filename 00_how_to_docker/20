@@ -1,0 +1,4 @@
+#!/bin/bash
+cmd="docker swarm init --advertise-addr $(docker-machine ip Char)"
+docker-machine ssh Char "
+ $cmd"
