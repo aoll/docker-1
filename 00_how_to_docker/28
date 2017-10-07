@@ -1,10 +1,10 @@
 #!/bin/bash
 
 eval "$(docker-machine env Char)"
-docker service rm engineering-bay
-docker service create -d   --name engineering-bay \
+docker service rm marines
+docker service create -d   --name marines \
 			--network overmind \
 			--replicas 2 \
 			-e OC_USERNAME=root \
 			-e OC_PASSWD=root \
-			42school/engineering-bay
+			42school/marine-squad

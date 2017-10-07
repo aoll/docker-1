@@ -1,0 +1,4 @@
+#!/bin/bash
+
+eval "$(docker-machine env Char)"
+docker service logs --follow $(docker service ps -f NAME=engineering-bay.1 -q  engineering-bay)
