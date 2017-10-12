@@ -8,9 +8,9 @@ docker rm Abathur;
 
 docker-machine ssh Char '
 docker run  -p 3000:3000 -it  --name  Abathur  -d \
- -v "$PWD":/root -w /root python:2-slim \
+ -v "$PWD"/Abathur:/root -w /root python:2-slim \
 ;'
-# /bin/bash;
+
 
 
 docker exec  Abathur  pip install flask;

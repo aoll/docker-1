@@ -1,7 +1,6 @@
 #!/bin/bash
 
-eval "$(docker-machine env Char)"
-docker service rm engineering-bay
+
 docker service create -d   --name engineering-bay \
 			--network overmind \
 			--replicas 2 \

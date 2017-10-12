@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker-machine ssh Char '
-docker restart overload';
+
+docker restart overload

@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-machine ssh Char "docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'  overload"
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'  overload

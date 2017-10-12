@@ -1,4 +1,4 @@
 #!/bin/bash
 
-eval $(docker-machine env Char)
+
 docker network create -d overlay --attachable  overmind

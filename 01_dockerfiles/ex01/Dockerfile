@@ -17,7 +17,8 @@ WORKDIR /home/ts3/teamspeak3-server_linux-amd64
 
 ADD ts3server.ini .
 
-EXPOSE 9987 #udp must be bind <port>:9987/udp at the runtime
+EXPOSE 9987
+#udp must be bind <port>:9987/udp at the runtime
 EXPOSE 10011
 EXPOSE 30033
 EXPOSE 41144
