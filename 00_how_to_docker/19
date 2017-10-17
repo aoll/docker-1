@@ -6,10 +6,10 @@ docker stop Abathur;
 docker rm Abathur;
 
 
-docker-machine ssh Char '
+# docker-machine ssh Char '
 docker run  -p 3000:3000 -it  --name  Abathur  -d \
- -v "$PWD"/Abathur:/root -w /root python:2-slim \
-;'
+ -v ~/Abathur:/root -w /root python:2-slim \
+# ;'
 
 
 
