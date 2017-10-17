@@ -1,20 +1,17 @@
 #!/bin/bash
-#docker-machine scp app.py Char:~
-eval $(docker-machine env Char)
-
-docker stop Abathur;
-docker rm Abathur;
 
 
-# docker-machine ssh Char '
+# docker stop Abathur;
+# docker rm Abathur;
+
+
+
 docker run  -p 3000:3000 -it  --name  Abathur  -d \
  -v ~/Abathur:/root -w /root python:2-slim \
-# ;'
+
 
 
 
 docker exec  Abathur  pip install flask;
 
 docker exec -d Abathur  python app.py;
-# docker exec -d Abathur  python app.py;
-# '

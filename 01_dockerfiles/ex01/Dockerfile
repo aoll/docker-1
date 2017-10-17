@@ -23,4 +23,4 @@ EXPOSE 10011
 EXPOSE 30033
 EXPOSE 41144
 
-ENTRYPOINT ["sh","ts3server_minimal_runscript.sh", "inifile=ts3server.ini"]
+ENTRYPOINT ["sh", "ts3server_minimal_runscript.sh", "inifile=ts3server.ini"]
